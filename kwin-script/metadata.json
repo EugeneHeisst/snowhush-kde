@@ -1,0 +1,14 @@
+{
+    "KPlugin": {
+        "Id": "snowhush",
+        "Name": "Snowhush",
+        "Description": "Tells the Snowhush snow overlay where windows and the cursor are",
+        "Authors": [{ "Name": "Snowhush KDE port" }],
+        "License": "MIT",
+        "Version": "0.1.0",
+        "EnabledByDefault": false
+    },
+    "X-Plasma-API": "declarativescript",
+    "X-Plasma-MainScript": "ui/main.qml",
+    "KPackageStructure": "KWin/Script"
+}
