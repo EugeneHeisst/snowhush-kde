@@ -10,7 +10,7 @@ install -Dm644 snowhush-kde.desktop "$HOME/.config/autostart/snowhush-kde.deskto
 kpackagetool6 --type KWin/Script -u kwin-script 2>/dev/null || kpackagetool6 --type KWin/Script -i kwin-script
 kwriteconfig6 --file kwinrc --group Plugins --key snowhushEnabled true
 qdbus6 org.kde.KWin /KWin reconfigure
-# Reload the script so a changed main.qml takes effect without logging out.
+# KWin caches compiled QML in memory: a changed main.qml takes effect only after logging out and back in.
 qdbus6 org.kde.KWin /Scripting org.kde.kwin.Scripting.unloadScript snowhush >/dev/null
 qdbus6 org.kde.KWin /KWin reconfigure
 qdbus6 org.snowhush.Kde /Snowhush org.snowhush.Kde.Quit >/dev/null 2>&1 && sleep 0.5 || true

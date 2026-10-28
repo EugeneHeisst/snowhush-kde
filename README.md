@@ -25,3 +25,9 @@ Snow hides while a full-screen window covers the display.
 ```
 
 Needs Rust (`rustup`), KWin 6 on Wayland and `kpackagetool6`/`qdbus6`.
+
+KWin caches a script's compiled QML in memory, so after updating `kwin-script/` the new version only runs after logging out and back in.
+
+## Cost
+
+Measured on a Ryzen laptop (1280×720 logical at 150%): Snowhush itself about 1.6% of one core and 160 MB; KWin about 0.7% with it running and nothing extra when nothing moves.
